@@ -1,0 +1,76 @@
+/* Minecraft Hosting Theme */
+:root {
+    --allay-blue: #4CC9F0;
+    --allay-dark: #4361EE;
+    --allay-light: #4895EF;
+    --allay-lighter: #B8F2E6;
+    --allay-gray: #F8F9FA;
+    --matte-white: rgba(255, 255, 255, 0.9);
+    --matte-dark: rgba(67, 97, 238, 0.9);
+}
+
+/* Матовые эффекты */
+.navbar-matte {
+    background: var(--matte-dark);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.card-matte {
+    background: var(--matte-white);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
+
+.server-card {
+    background: linear-gradient(135deg, var(--matte-white) 0%, rgba(248, 249, 250, 0.9) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* Кнопки */
+.btn-allay {
+    background: linear-gradient(135deg, var(--allay-blue) 0%, var(--allay-dark) 100%);
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-allay:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(67, 97, 238, 0.3);
+}
+
+.btn-allay:active {
+    transform: translateY(0);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Консоль стиль */
+.console-bg {
+    background: #1a202c;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(67, 97, 238, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(76, 201, 240, 0.1) 0%, transparent 20%);
+}
+
+/* Статус индикаторы */
+.status-running { color: #10B981; }
+.status-stopped { color: #EF4444; }
+.status-starting { color: #F59E0B; }

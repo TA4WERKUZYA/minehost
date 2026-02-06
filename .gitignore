@@ -1,0 +1,60 @@
+# Файл окружения Laravel
+.env
+.env.production
+
+# Логи и хранилище Laravel
+storage/logs/*
+storage/framework/sessions/*
+storage/framework/views/*
+storage/framework/cache/*
+!storage/logs/.gitkeep
+!storage/framework/sessions/.gitkeep
+!storage/framework/views/.gitkeep
+!storage/framework/cache/.gitkeep
+
+# Временные файлы
+bootstrap/cache/*
+!bootstrap/cache/.gitkeep
+
+# Зависимости
+vendor/
+node_modules/
+composer.lock
+package-lock.json
+yarn.lock
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+
+# Файлы серверов Minecraft (критически важно не заливать!)
+/opt/minecraft-servers/*
+!/opt/minecraft-servers/README.md
+
+# Файлы демона (токены и конфигурации)
+/opt/minecraft-daemon/server_configs.json
+/opt/minecraft-daemon/venv/
+
+# Резервные копии и дампы
+*.backup
+*.sql
+*.dump
+
+# Файлы сессий и кэша
+session/*
+cache/*
+
+# Служебные файлы проекта
+*.swp
+*.swo
+*~
+total_disk
+total_memory
+used_disk
+used_memory
+.phpstorm.meta.php
+_ide_helper.php
+.phpunit.result.cache
